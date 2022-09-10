@@ -7,8 +7,6 @@ import { todoSlice } from "../store/store";
 
 const TodoList = (): JSX.Element => {
   //react
-  // const todos = useSelector((state: RootState) => state.todos);
-  //custom Hook 으로 변경
   const todos = useAppSelector((state) => state.todos);
   const dispatch = useAppDispatch();
 
