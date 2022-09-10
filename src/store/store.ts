@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export type TodoType = {
+export interface ITodoType {
   id: number;
   content: string;
   isDone: boolean;
-};
+}
 
-type TodosType = TodoType[];
+type TodosType = ITodoType[];
 
 const initialState: TodosType = [
   { id: 1, content: "타입스크립트 배우기", isDone: false },

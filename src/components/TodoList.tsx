@@ -1,6 +1,4 @@
-import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { RootState } from "..";
 import { ReactComponent as Trash } from "../assets/ic-trash.svg";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { todoSlice } from "../store/store";

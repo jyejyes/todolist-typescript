@@ -7,7 +7,7 @@ import TodoList from "./components/TodoList";
 import TodoWrite from "./components/TodoWrite";
 import "./index.css";
 
-export interface DateProps {
+export interface IDateProps {
   year: string;
   month: string;
   day: string;
