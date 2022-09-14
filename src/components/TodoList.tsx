@@ -3,16 +3,16 @@ import { ReactComponent as Trash } from "../assets/ic-trash.svg";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { todoSlice } from "../store/store";
 
-const TodoList = (): JSX.Element => {
+const TodoList = () => {
   //react
   const todos = useAppSelector((state) => state.todos);
   const dispatch = useAppDispatch();
 
-  const handleClickDone = (id: number): void => {
+  const handleClickDone = (id: number) => {
     dispatch(todoSlice.actions.toggle(id));
   };
 
-  const handleClickTrash = (id: number): void => {
+  const handleClickTrash = (id: number) => {
     dispatch(todoSlice.actions.delete(id));
   };
 

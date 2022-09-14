@@ -7,24 +7,15 @@ import TodoList from "./components/TodoList";
 import TodoWrite from "./components/TodoWrite";
 import "./index.css";
 
-export interface IDateProps {
-  year: string;
-  month: string;
-  day: string;
-  yoil: string;
-}
-
-const App: React.FC = () => {
+const App = () => {
   //state
-  const [year, month, day, yoil]: Array<string> = moment() //날짜
+  const [year, month, day, yoil]: string[] = moment() //날짜
     .format("YYYY-MM-DD-dddd")
     .split("-");
-  const [isOpenAdd, setIsOpenAdd] = useState<Boolean>(false);
+  const [isOpenAdd, setIsOpenAdd] = useState(false);
 
   //function
-  const handleChangeOpen: React.MouseEventHandler<
-    HTMLButtonElement
-  > = (): void => {
+  const handleChangeOpen = () => {
     setIsOpenAdd((prev) => !prev);
   };
 

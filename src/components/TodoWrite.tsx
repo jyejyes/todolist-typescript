@@ -10,12 +10,10 @@ const TodoWrite = () => {
   //state
   const [content, setContent] = useState<string>("");
 
-  const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
   };
-  const handleEnterKey: React.KeyboardEventHandler<HTMLInputElement> = (
-    e
-  ): void => {
+  const handleEnterKey: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === "Enter") {
       setContent("");
       if (!e.currentTarget.value) return;

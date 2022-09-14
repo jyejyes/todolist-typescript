@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import { IDateProps } from "../App";
 import { useAppSelector } from "../store/hooks";
 
-const TodoHeader = ({ year, month, day, yoil }: IDateProps): JSX.Element => {
+export interface TodoHeaderProps {
+  year: string;
+  month: string;
+  day: string;
+  yoil: string;
+}
+
+const TodoHeader = ({ year, month, day, yoil }: TodoHeaderProps) => {
   const todos = useAppSelector((state) => state.todos);
   let rest = todos.length;
   todos.map((item) => {
